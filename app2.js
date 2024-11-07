@@ -94,10 +94,24 @@ document.getElementById("btn-create-bloques").addEventListener("click", function
         block.style.width = "50px";
         block.style.height = "50px";
         block.style.margin = "5px";
-        block.style.backgroundColor = "lightblue";
+        block.style.backgroundColor = getRandomColor();
         block.style.display = "inline-block";
         gameArea.appendChild(block);
     }
+
+// Función para generar un color aleatorio en formato hexadecimal
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+
+
+
 
     const clearButton = document.createElement("button");
     clearButton.textContent = "Limpiar bloques";

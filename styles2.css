@@ -102,22 +102,27 @@
 }
 
 
-
 #game-area {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrar elementos horizontalmente */
-    justify-content: center; /* Centrar elementos verticalmente */
-    gap: 10px; /* Espacio entre elementos */
+    flex-direction: row; /* Coloca los elementos en fila */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los elementos */
     margin-top: 20px;
+    padding: 10px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a una nueva línea si no caben */
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
   }
   
   #game-area input[type="text"] {
-    width: 80%; /* Ajusta el ancho del input para que no ocupe todo el contenedor */
-    max-width: 300px; /* Limita el ancho máximo */
+    width: 100%; /* Se ajusta al ancho del contenedor en pantallas pequeñas */
+    max-width: 150px; /* Limita el ancho máximo en pantallas grandes */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
   }
   
   #game-area button {
@@ -127,11 +132,27 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    box-sizing: border-box;
   }
   
-  #game-area p {
-    font-size: 1rem;
-    color: #333;
-    text-align: center;
+
+  
+  /* Media query para dispositivos pequeños (móviles) */
+  @media (max-width: 600px) {
+    #game-area {
+      flex-direction: row; /* Mantiene los elementos en fila, pero permite que se ajusten */
+      justify-content: center;
+    }
+  
+    #game-area input[type="text"],
+    #game-area button {
+      max-width: 100%; /* Permite que ocupen el ancho completo en móviles */
+    }
+  
+    #game-area p {
+      font-size: 0.9rem; /* Ajusta el tamaño de fuente en móviles */
+    }
   }
   
