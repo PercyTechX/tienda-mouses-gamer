@@ -1,0 +1,137 @@
+/* Reset básico para asegurar consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Estilos para el contenedor principal */
+  main {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  /* Título principal */
+  h1 {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 20px;
+  }
+  
+  /* Sección de cambio de color */
+  div {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo del input de color */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  /* Botones */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #4a90e2;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background-color: #357abd;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Estilo de área de juego */
+  #game-area {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    min-height: 100px;
+  }
+  
+  #game-area p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .block {
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.block:hover {
+    transform: scale(1.1);
+}
+
+
+
+#game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos horizontalmente */
+    justify-content: center; /* Centrar elementos verticalmente */
+    gap: 10px; /* Espacio entre elementos */
+    margin-top: 20px;
+  }
+  
+  #game-area input[type="text"] {
+    width: 80%; /* Ajusta el ancho del input para que no ocupe todo el contenedor */
+    max-width: 300px; /* Limita el ancho máximo */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #game-area button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #game-area p {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+  }
+  
